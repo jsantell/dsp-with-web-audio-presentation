@@ -12,7 +12,7 @@ osc.connect(gain);
 gain.connect(fft.input);
 gain.connect(ctx.destination);
 fft.connect(ctx.destination);
-osc.start();
+osc.start(0);
 </script>
 </body>
 </html>

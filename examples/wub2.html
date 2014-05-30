@@ -29,7 +29,7 @@ var modGain2 = ctx.createGain();
 modGain2.gain.value = 50;
 modulator2.connect(modGain2);
 modGain2.connect(gain1.gain);
-modulator2.start();
+modulator2.start(0);
 
 modulator.connect(modGain);
 modGain.connect(filter.frequency);
@@ -39,9 +39,9 @@ carrier2.connect(filter);
 filter.connect(gain1);
 gain1.connect(ctx.destination);
 
-modulator.start();
-carrier1.start();
-carrier2.start();
+modulator.start(0);
+carrier1.start(0);
+carrier2.start(0);
 gain1.connect(fft.input);
 fft.connect(ctx.destination);
 </script>

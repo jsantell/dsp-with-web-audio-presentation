@@ -13,10 +13,10 @@ var fft = new FFT(ctx, { canvas: document.getElementById("canvas"), type: "time"
 
 carrier.connect(gain);
 modulator.connect(gain.gain);
-modulator.start();
+modulator.start(0);
 gain.connect(fft.input);
 gain.connect(ctx.destination);
-carrier.start();
+carrier.start(0);
 fft.connect(ctx.destination);
 </script>
 </body>
