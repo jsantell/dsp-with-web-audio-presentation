@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<body>
+<canvas style="width:800px; height:300px;" id="canvas"></canvas>
+<script src="FFT.js"></script>
+<script>
+var ctx = window.AudioContext ? new AudioContext() : new webkitAudioContext();
+var carrier1 = ctx.createOscillator();
+var carrier2 = ctx.createOscillator();
+var gain1 = ctx.createGain();
+var filter = ctx.createBiquadFilter();
+filter.frequency.value = 500;
+carrier1.frequency.value = 40;
+carrier2.frequency.value = 80;
+carrier1.type = "sawtooth";
+carrier2.type = "square";
+gain1.gain.value = 1;
+
+var modulator = ctx.createOscillator();
+var modGain = ctx.createGain();
+modulator.frequency.value = 1;
+modGain.gain.value = 500;
+modulator.connect(modGain);
+modGain.connect(filter.frequency);
+
+var fft = new FFT(ctx, { canvas: document.getElementById("canvas"), type: "time" });
+
+carrier1.connect(filter);
+carrier2.connect(filter);
+filter.connect(gain1);
+gain1.connect(ctx.destination);
+
+modulator.start();
+carrier1.start();
+carrier2.start();
+gain1.connect(fft.input);
+fft.connect(ctx.destination);
+</script>
+</body>
+</html>

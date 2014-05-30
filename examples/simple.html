@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+<canvas style="width:800px; height:300px;" id="canvas"></canvas>
+<script src="FFT.js"></script>
+<script>
+var ctx = window.AudioContext ? new AudioContext() : new webkitAudioContext();
+var osc = ctx.createOscillator();
+var gain = ctx.createGain();
+var fft = new FFT(ctx, { canvas: document.getElementById("canvas"), type: "time" });
+osc.connect(gain);
+gain.connect(fft.input);
+gain.connect(ctx.destination);
+fft.connect(ctx.destination);
+osc.start();
+</script>
+</body>
+</html>

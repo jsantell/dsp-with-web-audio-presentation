@@ -1,0 +1,12 @@
+pre .pln{color:#fffdeb}
+pre    .str{color:#aaee22}
+pre .kwd{color:#ff0077}
+pre .com{color:#727879}
+pre .typ{color:#fff}
+pre .lit{color:#ffb412}
+pre .pun,.opn,.clo{color:#04dbe5}
+pre .tag{color:#04dbe5}
+pre .atn{color:#606}
+pre .atv{color:#080}
+pre .dec,.var{color:red}
+pre .fun{color:red}

@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'League Gothic';
+  src: url("../vendor/font/league_gothic-webfont.eot");
+  src: url("../vendor/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../vendor/font/league_gothic-webfont.woff") format("woff"), url("../vendor/font/league_gothic-webfont.ttf") format("truetype"), url("../vendor/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto; }
+
+/**
+ * Road map
+ */ 
+
+section.road-map .map-section {
+  font-family: "League Gothic", Impact, sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  width: 300px;
+  margin-right: 20px;
+  float: left;
+  color: #222;
+}
+
+
+section.road-map .map-viz .goal.complete,
+section.road-map .map-viz .goal.active {
+  background-color: #8cbeb2;
+}
+
+section.road-map .map-imp .goal.complete,
+section.road-map .map-imp .goal.active {
+  background-color: #f2ebbf;
+}
+
+section.road-map .map-dsp .goal.complete,
+section.road-map .map-dsp .goal.active {
+  background-color: #f06060;
+}
+
+section.road-map .goal {
+  height: 80px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.20);
+  background-color: #666;
+}
+
+section.road-map .goal.active {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ **********************************************/
+body {
+  background: #444444;
+  background-color: #444444;
+}
+
+.reveal pre {
+  background-color: #222;
+  font-size:40px;
+}
+.reveal {
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #ddd; }
+
+::selection {
+  color: white;
+  background: #d33682;
+  text-shadow: none; }
+
+.left { float: left; }
+.right { float: right; }
+.reveal ul { list-style-type: none; }
+ul.float-column {
+  width: 260px;
+  margin-right: 20px;
+  float: left;
+}
+ul.float-column li.title {
+  font-weight: bold;
+  color: #8cbeb2;
+}
+
+ul.float-column li.highlight, strong {
+  font-weight: bold;
+  color: #f06060;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #ddd;
+  font-family: "League Gothic", Impact, sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: none; }
+
+.reveal h1 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+/*********************************************
+ * LINKS
+ **********************************************/
+.reveal a:not(.image) {
+  color: #ff0077;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:not(.image):hover {
+  color: #ff0077;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #1a6091; }
+
+/*********************************************
+ * IMAGES
+ **********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #657b83;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #268bd2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ **********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #268bd2; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #268bd2; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #268bd2; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #268bd2; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #78b9e6; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #78b9e6; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #78b9e6; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #78b9e6; }
+
+/*********************************************
+ * PROGRESS BAR
+ **********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #FF0077;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/**
+ *  Audio Controls
+ */
+
+.reveal a.btn {
+  border: 1px #222 solid;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.reveal a.btn:hover {
+  background-color: #666;
+}
+
+.reveal a.control-button {
+  font-size: 100%;
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+  color: #000;
+}
+
+.reveal .btn-group {
+  margin: 0 auto;
+  width: 460px;
+  display: block;
+}
+.reveal .clear { clear:both; }
+
+.reveal .btn-group a.btn {
+  font-size: 100%;
+  display: block;
+  float: left;
+  width: 150px;
+  color: #000;
+}
+
+.reveal a.control-button.playing {
+  color: #00ff00;
+}
+
+.reveal a.control-button.loading {
+  color: #0000ff;
+}
+
+.reveal input[type=range] {
+  font-size: 140%;
+  width: 300px;
+  height: 100px;
+}
+
+.reveal div.feedback {
+  width: 300px;
+  height: 50px;
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 46px;
+}
+
+/**
+ * Hack for getting Font Awesome in Reveal
+ */
+.reveal .btn i, .reveal i {
+  font-style: normal;
+  font-size: 100%;
+  border: 0px !important;
+}
+
+canvas {
+  background-color: #fff;
+}
+
+ul.browsers li { height: 50px; width: 900px; margin-left: 100px;}
+ul.browsers li div {
+  height: 50px;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+}
+ul.browsers div.browsers {
+  width: 100px;
+}
+ul.browsers div.firefox { background-image:url(../images/firefox.png); }
+ul.browsers div.chrome { background-image:url(../images/chrome.png); }
+ul.browsers div.safari { background-image:url(../images/safari.png); }
+ul.browsers div.opera { background-image:url(../images/opera.png); }
+ul.browsers div.ie { background-image:url(../images/ie.png); }
+ul.browsers div span { margin-left: 50px; }
+ul.browsers div i.partial { color: #F2EBBF; }
+ul.browsers div i.full { color: #8CBEB2; }
+ul.browsers div i.notsupported { color: #f06060; }
